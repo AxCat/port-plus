@@ -1,0 +1,22 @@
+.layui-nav-tree{
+    width: 150px;!important;
+}
+.layui-side{
+    width: 150px!important;
+}
+
+.text-center{
+    text-align: center;
+}
+.layui-body{
+    left: 150px;!important;
+}
+.layui-layout-admin .layui-footer{
+    left: 150px;!important;
+}
+.layui-layout-admin .layui-logo{
+    width: 150px;
+}
+.layui-layout-left{
+    left: 150px;!important;
+}

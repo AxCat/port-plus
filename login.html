@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>home</title>
+    <link rel="stylesheet" href="src/css/layui.css">
+    <link rel="stylesheet" href="src/css/reside.css">
+    <style>
+        .login {
+            height: 220px;
+            width: 260px;
+            padding: 20px;
+            background-color: rgba(0,0,0,0.5);
+            border-radius: 4px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -150px 0 0 -150px;
+            z-index: 99;
+            opacity: 0.9;
+        }
+        .forget_pwd{
+            color: #ffffff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="layui-bg-black" style="position: absolute;width: 100%;height: 100%">
+    <div class="login">
+        <h2 class="text-center">HCPortF-Server-管理登录</h2>
+        <form class="layui-form" action="home.html">
+            <div class="layui-form-item" style="margin-top: 20px;margin-bottom: 10px">
+                <input lay-verType="msg" class="layui-input" name="key" placeholder="用户名" required  lay-verify="required" type="text" autocomplete="off">
+            </div>
+            <div class="layui-form-item" style="margin-top: 20px;margin-bottom: 10px">
+                <input lay-verType="msg" class="layui-input" name="key" placeholder="密码" required  lay-verify="required" type="password" autocomplete="off">
+            </div>
+            <span class="forget_pwd" id="forget_pwd">无法登陆?</span>
+            <button class="layui-btn" lay-submit lay-filter="" style="width: 100%;margin-top: 15px" >登陆</button>
+        </form>
+    </div>
+</div>
+
+<script src="src/jquery.min.js"></script>
+<script src="src/layui.all.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#forget_pwd').click(function(){
+            layer.open({
+                type: 1
+                ,title:'忘记密码'
+                ,content: '<div style="padding: 20px 100px;">忘了找老黑</div>'
+                ,btn: '我知道了'
+                ,btnAlign: 'c' //按钮居中
+                ,shade: 0 //不显示遮罩
+                ,yes: function(){
+                    layer.closeAll();
+                }
+            });
+        });
+    })
+
+</script>
+
+</body>
+</html>
